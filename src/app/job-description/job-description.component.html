@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-2">
+            <button (click)="backToHomePage()" class="btn btn-secondary"><i class="bi bi-house"></i>Back</button>
+        </div>
+    </div>
+</div>
+<div class="container mb-2" *ngIf="jobDetails">
+    <div class="list-group mt-3">
+        <div class="list-group-item list-group-item-action">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-1 col-sm-1">
+                    <img [src]="jobDetails.companyLogo" alt="Logo" class="company-logo">
+                </div>
+                <div class="col-12 col-md-9 col-sm-10">
+                    <h2>{{jobDetails.title}}</h2>
+                    <mark class="bg-warning" style="border-radius: 9px;">{{jobDetails.types}}</mark>
+                    &nbsp;
+                    <mark class="bg-warning" style="border-radius: 9px;">{{jobDetails.industries}}</mark>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <p><b>Company Name: </b>{{jobDetails.companyName}}</p>
+        <p><b>Publish date: </b> {{jobDetails.publishDate}}</p>
+        <p><b>Location: </b> {{jobDetails.location}}</p>
+        <p><b>Reference: </b>{{jobDetails.reference}}</p>
+        <p><b>Description: </b></p>
+        <p [innerHTML]="jobDetails.description"></p>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  background-color: rgb(23, 23, 24);
+}

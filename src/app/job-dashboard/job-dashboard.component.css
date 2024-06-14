@@ -1,0 +1,7 @@
+.icon-star {
+  font-size: 20px;
+  cursor: pointer;
+}
+.active {
+  color: rgb(237, 205, 27);
+}

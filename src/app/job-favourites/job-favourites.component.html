@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="notFound" *ngIf="favouriteJobs?.length === 0">
+        <p class="text-center">No favourites added</p>
+    </div>
+</div>
+
+<div class="container mb-2">
+    <div class="list-group mt-3">
+        <a *ngFor="let job of favouriteJobs" class="list-group-item list-group-item-action">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-1 col-sm-1">
+                    <img [src]="job.companyLogo" alt="Logo" class="company-logo">
+                </div>
+                <div class="col-12 col-md-9 col-sm-10">
+                    <h5>{{ job.title }}</h5>
+                    <p>Company: {{ job.companyName }}</p>
+                    <p>Reference: {{ job.reference }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
